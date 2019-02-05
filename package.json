@@ -1,0 +1,50 @@
+{
+  "name": "task-loader",
+  "version": "0.0.1",
+  "description": "A Webpack loader that load modules and return results at build time",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanChen83/task-loader.git"
+  },
+  "author": "Ian Chen",
+  "license": "MIT",
+  "keywords": [
+    "webpack",
+    "task loader"
+  ],
+  "bugs": {
+    "url": "https://github.com/IanChen83/task-loader/issues"
+  },
+  "homepage": "https://github.com/IanChen83/task-loader#readme",
+  "dependencies": {
+    "core-js": "^2.6.3",
+    "loader-utils": "^1.2.3"
+  },
+  "scripts": {
+    "build": "babel lib --out-dir build",
+    "clean": "rm -rf build",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.3.1",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0"
+  },
+  "browserslist": "node 6.11.5",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "pretty-quick --staged"
+    }
+  }
+}
