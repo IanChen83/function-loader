@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/IanChen83/task-loader#readme",
   "dependencies": {
-    "core-js": "^2.6.3",
     "loader-utils": "^1.2.3"
   },
   "scripts": {
