@@ -5,7 +5,7 @@ module.exports = {
       {
         useBuiltIns: 'usage',
         targets: {
-          node: '6.11.5',
+          node: '8',
         },
         exclude: ['transform-regenerator'],
       },

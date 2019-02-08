@@ -1,7 +1,7 @@
 {
   "name": "task-loader",
   "version": "0.0.1",
-  "description": "A Webpack loader that load modules and return results at build time",
+  "description": "A Webpack loader that transforms modules (tasks) into results at build time",
   "main": "index.js",
   "repository": {
     "type": "git",
