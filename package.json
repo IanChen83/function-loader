@@ -1,5 +1,5 @@
 {
-  "name": "task-loader",
+  "name": "webpack-task-loader",
   "version": "0.0.1",
   "description": "A Webpack loader that transforms modules (tasks) into results at build time",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "license": "MIT",
   "keywords": [
     "webpack",
+    "webpack loader",
     "task loader"
   ],
   "bugs": {
@@ -21,9 +22,9 @@
     "loader-utils": "^1.2.3"
   },
   "scripts": {
-    "build": "babel lib --out-dir build",
-    "clean": "rm -rf build",
-    "prepublishOnly": "npm run build",
+    "build": "babel lib --out-dir .",
+    "clean": "rm *.js",
+    "prepare": "npm run build",
     "postpublish": "npm run clean"
   },
   "devDependencies": {
@@ -39,7 +40,7 @@
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0"
   },
-  "browserslist": "node 6.11.5",
+  "browserslist": "node 8",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
