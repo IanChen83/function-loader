@@ -105,10 +105,7 @@ This functions directly call [loader.emitFile](https://webpack.js.org/api/loader
 
 ## Limitations
 
-- Since Webpack has its own caching mechanism, when or how much times task modules
-  are loaded and executed are not guranteed. Therefore, make sure the side effects
-  will not cause race conditions.
-
+- When or how much times task modules are loaded/executed depend on Webpack's caching mechanism. Make sure the side effects will not cause race conditions.
 - The query values and output results of the task modules should be able to be JSON-stringified.
 
 ## TODO
