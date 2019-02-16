@@ -38,7 +38,7 @@ module.exports = {
 > Note that the rule `/\.task.js$/` is a subset of `/\.js$/`. Be careful if you use
 > babel or similar loaders to transform your source code.
 
-Then, modules with name matching `/\.task.js$/` will be loaded and Transformed via task-loader.
+Then, modules with name matching `/\.task.js$/` will be loaded and transformed via task-loader.
 
 ```
 // getMs.task.js
