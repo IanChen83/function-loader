@@ -4,14 +4,16 @@
   </a>
 </div>
 
-# task-loader
+# function-loader
 
-A Webpack loader that transforms modules (tasks) into results at build time.
+A Webpack loader that executes tasks (modules exporting functions) and
+transforms them into results at build time.
 
-You can see this loader as val-loader with APIs re-designed. We believe
-task-loader is much more useful when there're shared tasks in both frontend and
-backend. Also, if you want to load assets but cannot find a proper loader, this
-loader allows you to quickly prototype a custom loader.
+You can see this loader as [val-loader](https://github.com/webpack-contrib/val-loader/)
+with APIs re-designed. We believe function-loader is much more useful when
+there're shared functions in both frontend and backend. Moreover, if you want to load
+assets but cannot find a proper loader, this loader allows you to quickly
+prototype a custom loader.
 
 ## Requirements
 
@@ -28,7 +30,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.task.js$/,
-      loader: 'task-loader',
+      loader: 'function-loader',
       exclude: /node_modules/
     }]
   }
@@ -38,7 +40,7 @@ module.exports = {
 > Note that the rule `/\.task.js$/` is a subset of `/\.js$/`. Be careful if you use
 > babel or similar loaders to transform your source code.
 
-Then, modules with name matching `/\.task.js$/` will be loaded and transformed via task-loader.
+Then, modules with name matching `/\.task.js$/` will be loaded and transformed via function-loader.
 
 ```
 // getMs.task.js
@@ -54,7 +56,7 @@ import Ms from './getMs.task?years=2'  // Ms will be 63072000000
 ```
 
 > Yon can also export an array or a plain object from the task module.
-> task-loader will respect the shape of the exported value and only transform
+> function-loader will respect the shape of the exported value and only transform
 > functions into results in-place.
 
 ## Loader Proxy API
@@ -64,7 +66,7 @@ proxies. The `this` variable has the following properties/functions
 
 ###### `this.isTask`
 
-only set to `true` when loaded by task-loader. Use this property to split
+only set to `true` when loaded by function-loader. Use this property to split
 frontend/backend logic.
 
 ###### `this.webpack`
@@ -111,6 +113,11 @@ This functions directly call [loader.emitFile](https://webpack.js.org/api/loader
 ## TODO
 
 - Cache compiled functions
+
+## Similar Projects
+
+- [value-loader](https://github.com/wikiwi/value-loader)
+- [val-loader](https://github.com/webpack-contrib/val-loader/)
 
 ## License
 

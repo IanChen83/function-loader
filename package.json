@@ -1,23 +1,27 @@
 {
-  "name": "webpack-task-loader",
+  "name": "function-loader",
   "version": "0.0.1",
-  "description": "A Webpack loader that transforms modules (tasks) into results at build time",
+  "description": "A Webpack loader that executes tasks and transforms them into results at build time",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IanChen83/task-loader.git"
+    "url": "git+https://github.com/IanChen83/function-loader.git"
   },
   "author": "Ian Chen",
   "license": "MIT",
   "keywords": [
     "webpack",
     "webpack loader",
-    "task loader"
+    "function loader",
+    "task"
+  ],
+  "files": [
+      "[^.]*.js"
   ],
   "bugs": {
-    "url": "https://github.com/IanChen83/task-loader/issues"
+    "url": "https://github.com/IanChen83/function-loader/issues"
   },
-  "homepage": "https://github.com/IanChen83/task-loader#readme",
+  "homepage": "https://github.com/IanChen83/function-loader#readme",
   "dependencies": {
     "loader-utils": "^1.2.3"
   },
