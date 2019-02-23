@@ -118,6 +118,7 @@ This functions directly call [loader.emitFile](https://webpack.js.org/api/loader
 
 - [value-loader](https://github.com/wikiwi/value-loader)
 - [val-loader](https://github.com/webpack-contrib/val-loader/)
+- [skeleton-loader](https://github.com/anseki/skeleton-loader)
 
 ## License
 
