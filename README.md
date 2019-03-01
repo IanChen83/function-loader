@@ -64,6 +64,8 @@ import Ms from './getMs.task?years=2'  // Ms will be 63072000000
 The exported task functions will be executed under the context of loader
 proxies. The `this` variable has the following properties/functions
 
+> In order to allow `this` variable to work, don't use arrow function syntax.
+
 ###### `this.isTask`
 
 only set to `true` when loaded by function-loader. Use this property to split
@@ -72,6 +74,12 @@ frontend/backend logic.
 ###### `this.webpack`
 
 only set to `true` when loaded by Webpack. See [loader.webpack](https://webpack.js.org/api/loaders/#thiswebpack).
+
+###### `raw(value)`
+
+Calling this function with `value=true` will enable raw mode. In raw mode, your
+target function should return a string, which should be a valid module source
+passing down the loader chain.
 
 ###### `this.cacheable(value)`
 
