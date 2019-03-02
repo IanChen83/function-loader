@@ -81,6 +81,18 @@ Calling this function with `value=true` will enable raw mode. In raw mode, your
 target function should return a string, which should be a valid module source
 passing down the loader chain.
 
+###### `this.emitError(obj)`
+
+Calling
+[loader.emitError](https://webpack.js.org/api/loaders/#thisemiterror)
+but accept strings as values.
+
+###### `this.emitWarning(obj)`
+
+Calling
+[loader.emitWarning](https://webpack.js.org/api/loaders/#thisemitwarning)
+but accept strings as values.
+
 ###### `this.cacheable(value)`
 
 This function directly call [loader.cacheable](https://webpack.js.org/api/loaders/#thiscacheable).
