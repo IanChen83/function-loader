@@ -1,6 +1,6 @@
 {
   "name": "function-loader",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A Webpack loader that executes tasks and transforms them into results at build time",
   "main": "index.js",
   "repository": {
